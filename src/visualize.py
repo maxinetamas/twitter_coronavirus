@@ -42,8 +42,8 @@ plt.bar(range(len(keys)), values)
 plt.xticks(range(len(keys)), keys)
 
 # set the labels for the axes
-plt.xlabel('Count')
-plt.ylabel('Input')
+plt.ylabel('Count')
+plt.xlabel('Input')
 plt.title("Input x Count")
 
 # save the bar graph as a PNG file

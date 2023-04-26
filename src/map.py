@@ -58,22 +58,19 @@ with zipfile.ZipFile(args.input_path) as archive:
                 # convert text to lower case
                 text = tweet['text'].lower()
 
-                # get country code of tweet if it exists
-                country = tweet['place']['country_code'] if tweet['place'] else 'Unknown'
-
                 # search hashtags
                 for hashtag in hashtags:
                     lang = tweet['lang']
+                    if tweet['place']:
+                        country = tweet['place']['country_code']
+                    else:
+                        country = None
                     if hashtag in text:
                         counter_lang[hashtag][lang] += 1
+                        counter_country[hashtag][country] += 1
                     counter_lang['_all'][lang] += 1
+                    counter_country['_all'][country] += 1
                     
-                # update country counters
-                if 'place' in tweet and tweet['place'] is not None and 'country_code' in tweet['place']:
-                    country_code = tweet['place']['country_code']
-                    counter_country[hashtag][country_code] += 1
-                    counter_country['_all'][country_code] += 1
-
 # open the outputfile
 try:
     os.makedirs(args.output_folder)
