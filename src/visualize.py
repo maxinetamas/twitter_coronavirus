@@ -31,20 +31,23 @@ items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), rev
 top_items = items[:10]
 
 # create lists for the x and y values
-x = []
-y = []
-for item in top_items:
-    x.append(item[0])
-    y.append(item[1])
+top_items = items[:10] 
+keys = [item[0] for item in top_items]
+values = [item[1] for item in top_items]
+keys = keys[::-1]
+values = values[::-1]
 
-# create a bar graph using plt.bar()
-plt.bar(x, y)
+# plot the bar graph
+plt.bar(range(len(keys)), values)
+plt.xticks(range(len(keys)), keys)
 
 # set the labels for the axes
 plt.xlabel('Count')
 plt.ylabel('Input')
 plt.title("Input x Count")
 
-# show the plot
-plt.savefig('output.png')
-plt.show()
+# save the bar graph as a PNG file
+if args.input_path[-1] == 'g':
+    plt.savefig(args.key[1:] + '_lang.png')
+else:
+    plt.savefig(args.key[1:] + '_country.png')
