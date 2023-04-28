@@ -1,3 +1,5 @@
+##Analysis of 2020 COVID Tweets Data Analysis Project
+
 In this project, I combed through Twitter tweets in 2020 (specifically during the rise of COVID-19) and analyzed the usage of various hashtags. 
 
 First, I started with the `map.py` file. I used this file to open a zip file for a days worth of tweets and track the popularity of certain hashtags. With my `map.py` file, I can assess the popularity of these hashtags on both the language and country level. 
