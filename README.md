@@ -1,4 +1,4 @@
-##Analysis of 2020 COVID Tweets Data Analysis Project
+## Analysis of 2020 COVID Tweets Data Analysis Project
 
 In this project, I combed through Twitter tweets in 2020 (specifically during the rise of COVID-19) and analyzed the usage of various hashtags. 
 
