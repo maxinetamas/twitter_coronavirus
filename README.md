@@ -37,6 +37,8 @@ and got the graph
 
 ![#coronavirus by language](coronavirus_lang.png)
 
+where our input (`--input_path`) is language. 
+
 To see the use of #coronavirus by country, I ran
 
 ```
@@ -46,6 +48,8 @@ $ python3 ./src/visualize.py --input_path=reduced.country --key='#coronavirus'
 and got the graph
 
 ![#coronavirus by country](coronavirus_country.png)
+
+where our input (`--input_path`) is country. 
 
 To see the use of #코로나바이러스 by language, I ran
 
@@ -57,6 +61,8 @@ and got the graph
 
 ![#코로나바이러by language](코로나바이러스_lang.png)
 
+ where our input (`--input_path`) is language.
+
 To see the use of #코로나바이러스 by country, I ran
 
 ```
@@ -66,6 +72,8 @@ $ python3 ./src/visualize.py --input_path=reduced.country --key='#코로나바�
 and got the graph
 
 ![#코로나바이러by country](코로나바이러스_country.png)
+
+ where our input (`--input_path`) is country.
 
 Finally, I use my `alternative_reduce.py` file to compare two different `--keys` and compares their usage throughout 2020. 
 
